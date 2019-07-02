@@ -1,5 +1,7 @@
 from pandas import read_csv
 from pandas import set_option
+from matplotlib import pyplot
+
 
 #  1. LOAD DATA
 filename = 'pima-indians-diabetes.data.csv'
@@ -70,3 +72,9 @@ skew = data.skew()
 print(skew)
 
 # 3 Understand Your Data With Visualization 
+
+# 3.1 
+# 3.1.1 Histograms
+data.hist()
+#pyplot.show()
+pyplot.savefig("matplotlib.png")

@@ -5,4 +5,5 @@ raw_data = open(filename, 'rb')
 
 data = loadtxt(raw_data, delimiter=',')
 
+
 print(data.shape)
