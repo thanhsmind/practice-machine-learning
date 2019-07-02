@@ -12,20 +12,32 @@ data = read_csv(filename, names=names)
 # 2. UNDERSTAND YOUR DATA WITH DESCRIPTIVE STATISTICS
 
 # 2.1 PEEK AT YOUR DATA
-print('PEEK AT YOUR DATA')
+print('*')
+print('==============PEEK AT YOUR DATA==============')
+print('*')
+
 peek = data.head(20)
 print(peek)
 
 # 2.2 DIMENSIONS OF YOUR DATA
-print('DIMENSIONS OF YOUR DATA')
+print('*')
+print('==============DIMENSIONS OF YOUR DATA==============')
+print('*')
+
 print(data.shape)
 
 # 2.3 DATA TYPE FOR EACH ATTRIBUTE
-print('DATA TYPE FOR EACH ATTRIBUTE')
+print('*')
+print('==============DATA TYPE FOR EACH ATTRIBUTE==============')
+print('*')
+
 print(data.dtypes)
 
 # 2.4 DESCRIPTIVE STATISTICS
-print('DESCRIPTIVE STATISTICS')
+print('*')
+print('==============DESCRIPTIVE STATISTICS==============')
+print('*')
+
 set_option('display.width', 2)
 # precision: đô chính xác, xác định bằng số lượng số 0 sau dấu .
 set_option('precision', 3)
@@ -34,11 +46,27 @@ description = data.describe()
 print(description)
 
 #   2.5 CLASS DISTRIBUTION (CLASSIFICATION ONLY)
-print('CLASS DISTRIBUTION (CLASSIFICATION ONLY)')
+print('*')
+print('==============CLASS DISTRIBUTION (CLASSIFICATION ONLY)==============')
+print('*')
+
 class_counts = data.groupby('class').size()
 print(class_counts)
 
 # 2.6 CORRELATIONS BETWEEN ATTRIBUTES
-print('CORRELATIONS BETWEEN ATTRIBUTES')
+print('*')
+print('==============CORRELATIONS BETWEEN ATTRIBUTES==============')
+print('*')
+
 correlations = data.corr(method='pearson')
 print(correlations);
+
+# 2.7 Skew of Univariate Distributions. Độ nghiêng của mô hình phân bố 
+print('*')
+print('===============Skew of Univariate Distributions==============')
+print('*')
+
+skew = data.skew()
+print(skew)
+
+# 3 Understand Your Data With Visualization 
