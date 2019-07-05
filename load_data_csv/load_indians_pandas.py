@@ -178,9 +178,9 @@ print('*')
 print('===============  Normalize Data ==============')
 print('*')
 
-from sklearn.preprocessing import Normalize
+from sklearn.preprocessing import Normalizer
 
-scaler= Normalize().fit(X)
+scaler= Normalizer().fit(X)
 normalizedX = scaler.transform(X)
 # summarize transformed data
 set_printoptions(precision=3)
