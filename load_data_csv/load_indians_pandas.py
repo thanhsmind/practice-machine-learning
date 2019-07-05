@@ -158,7 +158,7 @@ set_printoptions(precision=3)
 
 print(rescaledX[0:5,:])
 
-# 4.1.1 Standardize Data
+# 4.1.2 Standardize Data
 print('*')
 print('===============  Standardize Data ==============')
 print('*')
@@ -173,7 +173,7 @@ print(rescaledX[0:5,:])
 
 print(type(rescaledX))
 
-# 4.1.1 Normalize Data
+# 4.1.3 Normalize Data
 print('*')
 print('===============  Normalize Data ==============')
 print('*')
@@ -186,6 +186,15 @@ normalizedX = scaler.transform(X)
 set_printoptions(precision=3)
 print(normalizedX[0:5,:])
 
+# 4.1.3 Binarize Data (Make Binary)
+print('*')
+print('===============  Binarize Data (Make Binary) ==============')
+print('*')
+from sklearn.preprocessing import Binarizer
 
-
+binarizer = Binarizer(threshold=0.0).fit(X)
+binaryX = binarizer.transform(X)
+# summarize transformed data
+set_printoptions(precision=3)
+print(binaryX[0:5, :])
 
