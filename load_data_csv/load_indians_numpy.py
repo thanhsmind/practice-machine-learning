@@ -7,3 +7,4 @@ data = loadtxt(raw_data, delimiter=',')
 
 
 print(data.shape)
+
