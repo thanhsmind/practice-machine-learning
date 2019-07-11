@@ -198,3 +198,8 @@ binaryX = binarizer.transform(X)
 set_printoptions(precision=3)
 print(binaryX[0:5, :])
 
+
+# 5.1 Feature Selection For Machine Learning
+print('*')
+print('===============  Feature Selection For Machine Learning ==============')
+print('*')
